@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wprowadź swoje dane"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/edit_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Wiek"
+        android:inputType="number"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/edit_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Wzrost (cm)"
+        android:inputType="number"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/edit_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Waga (kg)"
+        android:inputType="number"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/btn_reset_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESET"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:focusable="true" />
+
+</LinearLayout>
