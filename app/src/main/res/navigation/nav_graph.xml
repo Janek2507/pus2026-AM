@@ -8,6 +8,16 @@
     <fragment
         android:id="@+id/FirstFragment"
         android:name="com.example.apkanawadnianie.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first" />
+        android:label="Fragment Pierwszy"
+        tools:layout="@layout/fragment_first">
+        <action
+            android:id="@+id/action_FirstFragment_to_StatsFragment"
+            app:destination="@id/StatsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/StatsFragment"
+        android:name="com.example.apkanawadnianie.StatsFragment"
+        android:label="Statystyki"
+        tools:layout="@layout/fragment_stats" />
 </navigation>

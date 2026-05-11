@@ -28,6 +28,23 @@
         app:layout_constraintBottom_toBottomOf="@+id/top_strip"
         android:contentDescription="Close application" />
 
+    <TextView
+        android:id="@+id/current_date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dzisiaj jest 27-10-2023"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="@+id/top_strip"
+        app:layout_constraintBottom_toBottomOf="@+id/top_strip"
+        app:layout_constraintStart_toEndOf="@+id/close_app_btn"
+        app:layout_constraintEnd_toStartOf="@+id/language_btn" />
+
     <ImageView
         android:id="@+id/language_btn"
         android:layout_width="48dp"
@@ -47,13 +64,14 @@
         android:id="@+id/water_drop"
         android:layout_width="250dp"
         android:layout_height="250dp"
+        android:contentDescription="Water drop icon"
         android:src="@drawable/drop_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.259"
-        android:contentDescription="Water drop icon" />
+        app:layout_constraintVertical_bias="0.185" />
 
     <TextView
         android:id="@+id/water_count_text"
@@ -86,50 +104,66 @@
         android:id="@+id/button_container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:orientation="horizontal"
-        android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/daily_goal_text"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/daily_goal_text">
 
         <TextView
             android:id="@+id/add_250_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+ 250 ml"
-            android:textColor="@android:color/white"
-            android:background="@drawable/button_rounded"
-            android:padding="16dp"
             android:layout_marginEnd="16dp"
+            android:background="@drawable/button_rounded"
             android:clickable="true"
-            android:focusable="true"/>
+            android:focusable="true"
+            android:padding="16dp"
+            android:text="+ 250 ml"
+            android:textColor="@android:color/white" />
 
         <TextView
             android:id="@+id/add_500_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+ 500 ml"
-            android:textColor="@android:color/white"
             android:background="@drawable/button_rounded"
-            android:padding="16dp"
             android:clickable="true"
-            android:focusable="true"/>
+            android:focusable="true"
+            android:padding="16dp"
+            android:text="+ 500 ml"
+            android:textColor="@android:color/white" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/remove_250_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- 250 ml"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_rounded"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@+id/button_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/reset_btn"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:src="@drawable/ic_reset"
-        android:layout_marginTop="32dp"
-        android:padding="8dp"
+        android:layout_marginTop="20dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:clickable="true"
+        android:contentDescription="Reset water counter"
         android:focusable="true"
-        app:layout_constraintTop_toBottomOf="@+id/button_container"
-        app:layout_constraintStart_toStartOf="parent"
+        android:padding="8dp"
+        android:src="@drawable/ic_reset"
         app:layout_constraintEnd_toEndOf="parent"
-        android:contentDescription="Reset water counter" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/remove_250_btn" />
 
     <View
         android:id="@+id/bottom_strip"
